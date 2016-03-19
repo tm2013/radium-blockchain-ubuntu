@@ -199,7 +199,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/JJ12880/testing/build_radium.sh"
+            "https://raw.githubusercontent.com/JJ12880/testing/master/build_radium.sh"
           ],
           "commandToExecute": "[concat('sh build_radium.sh ', parameters('installMethod'))]"
         }
