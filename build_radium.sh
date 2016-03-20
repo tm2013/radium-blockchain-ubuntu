@@ -26,8 +26,6 @@ then
 sudo mkdir $HOME/.Radium
 fi
 
-rm -f ~/.Radium/Radium.conf
-
 sudo printf 'rpcuser=%s\n' $2  >> $HOME/.Radium/Radium.conf
 sudo printf 'rpcpassword=%s\n' $3 >> $HOME/.Radium/Radium.conf
 sudo printf 'rpcport=%s\n' $4 >> $HOME/.Radium/Radium.conf
