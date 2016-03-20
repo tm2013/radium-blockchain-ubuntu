@@ -1,7 +1,6 @@
 # Radium Blockchain Node on Ubuntu VM
-This template delivers the Radium network to your VM.  Everything you need to get started using the Radium blockchain from the command line is included. 
-This template builds from source.  Once installed, 'Radiumd' will begin syncing the public blockchain. 
-You may then connect via SSH to the VM and launch 'Radiumd' to interface with the blockchain.
+This template delivers the Radium network to your VM.  Everything you need to get started using the Radium blockchain can be deployed right from the Azure console. No commandline is necessary, standard RPC connection settings can be set during deployment in the Azure portal. This template builds from source.  Once installed, 'Radiumd' will begin syncing the public blockchain. 
+You may then connect via SSH to the VM, or simply connect directly via RPC using the custom RPC values set during deployment.
                                                                          
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FJJ12880%2Ftesting%2Fmaster%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FJJ12880%2Ftesting%2Fmaster%2Fazuredeploy.json" target="_blank">
