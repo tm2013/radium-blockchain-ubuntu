@@ -41,8 +41,8 @@ sudo printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:80
 
 sudo printf 'rpcuser=%s\n' $2  >> /home/ubuntu/.Radium/Radium.conf
 sudo printf 'rpcpassword=%s\n' $3 >> /home/ubuntu/.Radium/Radium.conf
-sudo printf 'rpcallowip=%s\n' $4 >> /home/ubuntu/.Radium/Radium.conf
 sudo printf 'rpcport=%s\n' $5 >> /home/ubuntu/.Radium/Radium.conf
+sudo printf 'rpcallowip=%s\n' $4 >> /home/ubuntu/.Radium/Radium.conf
 sudo printf 'server=1' >> /home/ubuntu/.Radium/Radium.conf
 
 
