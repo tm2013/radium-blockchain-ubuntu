@@ -225,7 +225,7 @@
           "fileUris": [
             "https://raw.githubusercontent.com/JJ12880/testing/master/build_radium.sh"
           ],
-          "commandToExecute": "[concat('sh build_radium.sh ', parameters('installMethod'), ' ', parameters('rpcuser'), ' ', parameters('rpcpass'), ' ', parameters('rpcport'), ' ', parameters('rpcallowip'))]"
+          "commandToExecute": "[concat('sh build_radium.sh ', parameters('installMethod'), ' ', parameters('rpcuser'), ' ', parameters('rpcpass'), ' ', parameters('rpcport'), ' ', parameters('rpcallowip'), ' ', parameters('adminUsername'))]"
           }
       }
     }
