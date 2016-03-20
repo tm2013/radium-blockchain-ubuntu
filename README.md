@@ -37,6 +37,7 @@ When you click the Deploy to Azure icon above, you need to specify the following
 * `rpcpass`: This is the password for connectiong to the daemon via RPC.
 * `rpcport`: This is the port for connectiong to the daemon via RPC.
 * `allowip`: This is the ip address to allow to access daemon via RPC.
+
 # Getting Started Tutorial
 
 * Click the `Deploy to Azure` icon above.
