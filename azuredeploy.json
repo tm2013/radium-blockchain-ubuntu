@@ -46,7 +46,7 @@
 			}
 		},
 		"rpcuser": {
-			"type": "securestring",
+			"type": "string",
 			"metadata": {
 				"description": "Username for the RPC connection."
 			}
@@ -58,13 +58,13 @@
 			}
 		},
 		"rpcport": {
-			"type": "securestring",
+			"type": "string",
 			"metadata": {
 				"description": "Port for the RPC connection."
 			}
 		},
 		"rpcallowip": {
-			"type": "securestring",
+			"type": "string",
 			"metadata": {
 				"description": "Allowed IP for RPC connection."
 			}
