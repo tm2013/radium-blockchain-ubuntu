@@ -24,7 +24,6 @@ file=$HOME/.Radium
 if [ ! -e "$file" ]
 then
 sudo mkdir $HOME/.Radium
-mkdir $6/.Test
 fi
 
 rm -f ~/.Radium/Radium.conf
@@ -39,29 +38,25 @@ sudo printf 'server=1' >> $HOME/.Radium/Radium.conf
 #################################################################
 # Install all necessary packages for building Radium         #
 #################################################################
-#time apt-get install -y ntp wget git miniupnpc build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libtool autotools-dev autoconf pkg-config
+time apt-get install -y ntp wget git miniupnpc build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libtool autotools-dev autoconf pkg-config
 
-#rm -rf /usr/local/Radium
+cd /usr/local
+time git clone https://github.com/tm2013/Radium.git
 
-#cd /usr/local
-#time git clone https://github.com/tm2013/Radium.git
+chmod -R 777 /usr/local/Radium/
 
-#chmod -R 777 /usr/local/Radium/
-
-#cd /usr/local/Radium/src 
-#make -f makefile.unix USE_UPNP=-
-#cp /usr/local/Radium/src/Radiumd /usr/bin/Radiumd
+cd /usr/local/Radium/src 
+make -f makefile.unix USE_UPNP=-
+cp /usr/local/Radium/src/Radiumd /usr/bin/Radiumd
 
 ################################################################
 # Configure Radium node to auto start at boot       #
 #################################################################
-#printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
+printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
 
 
+chmod +x /etc/init.d/radium
+update-rc.d radium defaults
 
-
-#chmod +x /etc/init.d/radium
-#update-rc.d radium defaults
-
-#/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090  & exit 0
+/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090  & exit 0
 exit 0
