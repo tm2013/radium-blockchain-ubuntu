@@ -48,8 +48,8 @@ rm -f ~/.Radium/Radium.conf
 
 printf 'rpcuser=%s\n' $2  >> ~/.Radium/Radium.conf
 printf 'rpcpassword=%s\n' $3 >> ~/.Radium/Radium.conf
-printf 'rpcport=%s\n' $5 >> ~/.Radium/Radium.conf
-printf 'rpcallowip=%s\n' $4 >> ~/.Radium/Radium.conf
+printf 'rpcport=%s\n' $4 >> ~/.Radium/Radium.conf
+printf 'rpcallowip=%s\n' $5 >> ~/.Radium/Radium.conf
 printf 'server=1' >> ~/.Radium/Radium.conf
 
 
