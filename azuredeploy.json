@@ -45,13 +45,13 @@
 				"description": "Size of VM"
 			}
 		},
-		"rpcUsername": {
+		"rpcuser": {
 			"type": "securestring",
 			"metadata": {
 				"description": "Username for the RPC connection."
 			}
 		},
-		"rpcPassword": {
+		"rpcpass": {
 			"type": "securestring",
 			"metadata": {
 				"description": "Password for the RPC connection."
@@ -63,7 +63,7 @@
 				"description": "Port for the RPC connection."
 			}
 		},
-		"AllowIP": {
+		"rpcallowip": {
 			"type": "securestring",
 			"metadata": {
 				"description": "Allowed IP for RPC connection."
@@ -225,8 +225,8 @@
           "fileUris": [
             "https://raw.githubusercontent.com/JJ12880/testing/master/build_radium.sh"
           ],
-          "commandToExecute": "[concat('sh build_radium.sh ', parameters('installMethod'))]"
-        }
+          "commandToExecute": "[concat('sh build_radium.sh ', parameters('installMethod'), ' ', parameters('rpcuser'), ' ', parameters('rpcpass'), ' ', parameters('rpcport'), ' ', parameters('rpcallowip'))]"
+          }
       }
     }
   ]
