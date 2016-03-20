@@ -9,7 +9,7 @@ You may then connect via SSH to the VM and launch 'Radiumd' to interface with th
 </a>
 
 # What is Radium?
-What is Radium?
+
 ----------------
 Radium is a Proof-Of-Stake Cryptocurrency that serves as the base blockchain for the Radium SmartChain.
  - 1 minute block targets
