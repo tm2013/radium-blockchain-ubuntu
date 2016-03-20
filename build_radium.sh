@@ -34,16 +34,19 @@ make -f makefile.unix USE_UPNP=-
  cp /usr/local/Radium/src/Radiumd /usr/bin/Radiumd
 
 ################################################################
-# Configure BitShares witeness node to auto start at boot       #
+# Configure Radium node to auto start at boot       #
 #################################################################
+
 sudo printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
+
 sudo printf 'rpcuser=%s\n' $2  >> /home/ubuntu/.Radium/Radium.conf
 sudo printf 'rpcpassword=%s\n' $3 >> /home/ubuntu/.Radium/Radium.conf
-sudo printf 'rpcallowip=%s\n' $4>> /home/ubuntu/.Radium/Radium.conf
-sudo printf 'rpcport=%s\n' $5>> /home/ubuntu/.Radium/Radium.conf
-sudo printf 'server=1' >> $6 /home/ubuntu/.Radium/Radium.conf
+sudo printf 'rpcallowip=%s\n' $4 >> /home/ubuntu/.Radium/Radium.conf
+sudo printf 'rpcport=%s\n' $5 >> /home/ubuntu/.Radium/Radium.conf
+sudo printf 'server=1' >> /home/ubuntu/.Radium/Radium.conf
+
 
 chmod +x /etc/init.d/radium
 update-rc.d radium defaults
 
-/usr/bin/radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/ & exit 0
+/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090  & exit 0
