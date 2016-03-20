@@ -13,7 +13,9 @@ You may then connect via SSH to the VM and launch 'Radiumd' to interface with th
 Radium is a Proof-Of-Stake Cryptocurrency that serves as the base blockchain for the Radium SmartChain.
  - 1 minute block targets
  - Proof-Of-Stake
+ 
 Services include:
+
 - Username - Address linking
 - Identity Verification
 - Proof of Existence: Text Notes
@@ -31,10 +33,6 @@ When you click the Deploy to Azure icon above, you need to specify the following
 * `dnsLabelPrefix`: This is used as both the VM name and DNS name of your public IP address.  Please ensure an unique name.
 * `installMethod`: This tells Azure how to install the software.  This installs from source, but be advised this may take a long time to complete.
 * `vmSize`: This is the size of the VM to use. It is by default set to A2.
-* `rpcuser`: This is the username for connectiong to the daemon via RPC.
-* `rpcpass`: This is the password for connectiong to the daemon via RPC.
-* `rpcport`: This is the port for connectiong to the daemon via RPC.
-* `allowip`: This is the ip address to allow to access daemon via RPC.
 
 # Getting Started Tutorial
 
@@ -46,4 +44,4 @@ When you click the Deploy to Azure icon above, you need to specify the following
 
 # Licensing
 
-Radium is released under the terms of the MIT license. See `COPYING` for more information or see http://opensource.org/licenses/MIT.
+Radium is released under the terms of the MIT license. See http://opensource.org/licenses/MIT for more information.
