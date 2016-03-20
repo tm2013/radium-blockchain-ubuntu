@@ -24,7 +24,7 @@ file=$HOME/.Radium
 if [ ! -e "$file" ]
 then
 sudo mkdir $HOME/.Radium
-mkdir $HOME/.Test
+mkdir $6/.Test
 fi
 
 rm -f ~/.Radium/Radium.conf
