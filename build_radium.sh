@@ -9,7 +9,6 @@ ps axjf
 # Update Ubuntu and install prerequisites for running Radium #
 #################################################################
 time apt-get update
-time apt-get install -y ntp wget git miniupnpc build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libtool autotools-dev autoconf pkg-config
 
 
 #################################################################
@@ -20,15 +19,15 @@ echo "nproc: $NPROC"
 #################################################################
 # Install all necessary packages for building Radium         #
 #################################################################
+time apt-get install -y ntp wget git miniupnpc build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libtool autotools-dev autoconf pkg-config
 
-echo "lib install done"
 rm -rf /usr/local/Radium
-echo "remove done" 
+
 cd /usr/local
 time git clone https://github.com/tm2013/Radium.git
-echo "clone done"
+
 chmod -R 777 /usr/local/Radium/
-echo "starting make"
+
 cd /usr/local/Radium/src 
 make -f makefile.unix USE_UPNP=-
  cp /usr/local/Radium/src/Radiumd /usr/bin/Radiumd
