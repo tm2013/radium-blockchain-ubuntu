@@ -38,7 +38,7 @@ make -f makefile.unix USE_UPNP=-
 printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
 
 file=$HOME/.Radium
-if [ ! -e "$file"]
+if [ ! -e "$file" ]
 then
 mkdir ~/.Radium
 fi
