@@ -23,11 +23,11 @@ then
 sudo mkdir $HOME/.Radium
 fi
 
-sudo printf 'rpcuser=%s\n' $2  >> $HOME/.Radium/Radium.conf
-sudo printf 'rpcpassword=%s\n' $3 >> $HOME/.Radium/Radium.conf
-sudo printf 'rpcport=%s\n' $4 >> $HOME/.Radium/Radium.conf
-sudo printf 'rpcallowip=%s\n' $5 >> $HOME/.Radium/Radium.conf
-sudo printf 'server=1' >> $HOME/.Radium/Radium.conf
+sudo printf 'rpcuser=%s\n' $2  >> $HOME/.Radium/radium.conf
+sudo printf 'rpcpassword=%s\n' $3 >> $HOME/.Radium/radium.conf
+sudo printf 'rpcport=%s\n' $4 >> $HOME/.Radium/radium.conf
+sudo printf 'rpcallowip=%s\n' $5 >> $HOME/.Radium/radium.conf
+sudo printf 'server=1' >> $HOME/.Radium/radium.conf
 
 
 #################################################################
@@ -44,13 +44,13 @@ chmod -R 777 /usr/local/Radium/
 
 cd /usr/local/Radium/src 
 make -f makefile.unix USE_UPNP=-
-cp /usr/local/Radium/src/Radiumd /usr/bin/Radiumd
+cp /usr/local/Radium/src/radiumd /usr/bin/radiumd
 
 ################################################################
 # Configure Radium node to auto start at boot       #
 #################################################################
 
-printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
+printf '%s\n%s\n' '#!/bin/sh' '/usr/bin/radiumd --rpc-endpoint=127.0.0.1:8090 -d /usr/local/Radium/programs/radiumd/'>> /etc/init.d/radium
 chmod +x /etc/init.d/radium
 update-rc.d radium defaults
-/usr/bin/Radiumd --rpc-endpoint=127.0.0.1:8090  & exit 0
+/usr/bin/radiumd --rpc-endpoint=127.0.0.1:8090  & exit 0
